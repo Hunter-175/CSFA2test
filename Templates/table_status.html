@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Change Table Status</h1>
+
+    <form method="POST"> {% csrf_token %}
+    Table Number:<input type="text" style="padding: 12px;" name="t_num"/><br><br>
+    Table Status(nv or v):<input type="text" style="padding: 12px;" name="t_stat"/><br><br>
+        <input type="submit" name=function value="Change"/>
+    </form>
+
+{% endblock %}

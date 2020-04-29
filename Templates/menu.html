@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<h1>Menu</h1>
+
+<style>
+
+    body{
+        text-align: center;
+        color: black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+
+    }
+
+    .gridc{
+        display: grid;
+        grid-template-columns: 5fr 3fr 1fr;
+        max-width: 200px;
+        margin: 0px 40px 0px 515px;
+    }
+
+    .inline{
+        display: inline;
+    }
+
+</style>
+
+
+    <h3>FOOD ITEMS ($)</h3>
+    <section class="inline">
+        <section class="gridc">
+            <div></div>
+            <div>
+            {% for x in food %}
+                {% for y in x %}
+                    <div>{{y}}</div>
+                {%endfor%}
+            
+            {% endfor %}
+            </div>
+            <div>
+            {% for x in food_rate %}
+                {% for y in x %}
+                    <div>{{y}}</div>
+                {%endfor%}
+                
+            {% endfor %}
+            </div>
+        </section>
+    <h3>DRINK ITEMS ($)</h3>
+        <section></section>
+        <section class="gridc">
+            <div></div>
+            <div>
+            {% for x in drink %}
+                {% for y in x %}
+                    <div>{{y}}</div>
+                {%endfor%}
+            
+            {% endfor %}
+            </div>
+            <div>
+            {% for x in drink_rate %}
+                {% for y in x %}
+                    <div>{{y}}</div>
+                {%endfor%}
+                
+            {% endfor %}
+            </div>
+        </section>
+    </section>
+
+
+<button  style="margin: 100px 0;"><a href="order">Order</a></button>
+
+{% endblock %}
+

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>All bills</h1>
+
+    <style>
+
+        body{
+            text-align: center;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+    
+        }
+    
+        .gridc{
+            display: grid;
+            grid-template-columns: 5fr 3fr 1fr;
+            max-width: 200px;
+            margin: 0px 573px;
+        }
+    
+        .gridc div{
+            margin: 10px;
+        }
+        .margin1{
+            margin-left: 560px;
+            margin-right: 20px;
+        }
+
+        .margin2{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .margin3{
+            margin-left: 20px;
+            margin-right: 560px;
+        }
+        
+        .inline{
+            display: flex;
+        }
+    </style>
+
+    <section class="gridc">
+        <div>Order No.</div>
+        <div >Item</div>
+        <div>Qty</div>
+    </section>
+    
+    <section class="gridc">
+        <div>
+        {% for x in bill_no %}
+            {% for y in x %}
+                <div>{{y}}</div>
+            {%endfor%}
+        
+        {% endfor %}    
+        </div>
+        <div>
+        {% for x in bill_item %}
+            {% for y in x %}
+                <div>{{y}}</div>
+            {%endfor%}
+        
+        {% endfor %}
+        </div>
+        <div>
+        {% for x in bill_qty %}
+            {% for y in x %}
+                <div>{{y}}</div>
+            {%endfor%}
+            
+        {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

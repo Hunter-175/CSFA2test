@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bill</h1>
+
+    <form action="billresult/" method="POST"> {% csrf_token %}
+    Order_No.:<input type="number" style="padding: 12px;" name="orderno"/>
+        <input type="submit" name=function value="Get Bill" />
+    </form>
+
+
+
+{% endblock %}

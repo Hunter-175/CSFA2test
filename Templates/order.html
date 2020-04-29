@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Order</h1>
+
+    <h2>Your order number is - {{orderno}}</h2>
+
+    <form method="POST"> {% csrf_token %}
+    Item:<input type="text" style="padding: 12px;" name="item"/>
+    Qty:<input type="text" style="padding: 12px;" name="qty"/><br><br>
+        <input type="submit" name=function1 value="placeorder"/>
+    </form>
+
+{% endblock %}

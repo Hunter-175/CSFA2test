@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+    body{
+        text-align: center;
+        margin: auto;
+        background-color: grey;
+    }
+    button{
+        padding: 20px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+    <img src="https://www.dineout.co.in/blog/wp-content/uploads/2019/11/rsz_101-845x321.jpg" height="450px" width="1500px">
+    <h1 class="mt-2">Home</h1>
+    <hr class="mt-0 mb-4">
+
+    <button type="button" class="btn btn-outline-primary"><a href="ad">Admin</a></button>
+    <button type="button" class="btn btn-outline-primary"><a href="customer">Customer</a></button>
+{% endblock %}
+

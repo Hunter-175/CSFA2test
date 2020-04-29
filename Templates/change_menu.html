@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Change Menu</h1>
+
+    <form method="POST"> {% csrf_token %}
+    Item(use this for add):<input type="text" style="padding: 12px;" name="item"/><br><br>
+    Price:<input type="text" style="padding: 12px;" name="price"/><br><br>
+    Type:<input type="text" style="padding: 12px;" name="type"/><br><br>
+    Item_num(only for add):<input type="text" style="padding: 12px;" name="nit"/><br><br>
+    New Name(if any):<input type="text" style="padding: 12px;" name="nname"/><br><br>
+        <input type="submit" name=function value="Add Item"/>
+        <input type="submit" name=function value="Update Item"/>
+        <input type="submit" name=function value="Delete Item"/>
+    </form>
+
+{% endblock %}
